@@ -52,7 +52,7 @@
             }
             if (I.setAttribute("data-dpr", F), !H) {
                 if (H = J.createElement("meta"), H.setAttribute("name", "viewport"), H.setAttribute("content",
-                        "initial-scale=" + E + ", maximum-scale=" + E + ", minimum-scale=" + E + ", user-scalable=no"),
+                    "initial-scale=" + E + ", maximum-scale=" + E + ", minimum-scale=" + E + ", user-scalable=no"),
                     I.firstElementChild) {
                     I.firstElementChild.appendChild(H)
                 } else {
@@ -69,12 +69,12 @@
                 function () {
                     J.body.style.fontSize = 12 * F + "px"
                 }, !1), L(), D.dpr = N.dpr = F, D.refreshRem = L, D.rem2px = function (d) {
-                var c = parseFloat(d) * this.rem;
-                return "string" == typeof d && d.match(/rem$/) && (c += "px"), c
-            }, D.px2rem = function (d) {
-                var c = parseFloat(d) / this.rem;
-                return "string" == typeof d && d.match(/px$/) && (c += "rem"), c
-            }
+                    var c = parseFloat(d) * this.rem;
+                    return "string" == typeof d && d.match(/rem$/) && (c += "px"), c
+                }, D.px2rem = function (d) {
+                    var c = parseFloat(d) / this.rem;
+                    return "string" == typeof d && d.match(/px$/) && (c += "rem"), c
+                }
         }(window, window.lib || (window.lib = {}));
     </script>
     <!-- css -->
@@ -258,7 +258,8 @@
             border-radius: .16rem;
         }
 
-        article>div,article>a {
+        article>div,
+        article>a {
             position: relative;
             width: 33.3333%;
             height: 100%;
@@ -268,7 +269,8 @@
             justify-content: center;
         }
 
-        article>div::after,article>a::after {
+        article>div::after,
+        article>a::after {
             content: ' ';
             width: .03rem;
             height: .61rem;
@@ -282,7 +284,8 @@
             display: none;
         }
 
-        article div p,article a p {
+        article div p,
+        article a p {
             margin-bottom: .03rem;
             font-size: .32rem;
             font-family: PingFangSC-Medium, PingFang SC;
@@ -291,7 +294,8 @@
             line-height: .45rem;
         }
 
-        article div span,article a span {
+        article div span,
+        article a span {
             font-size: .32rem;
             font-family: PingFangSC-Medium, PingFang SC;
             font-weight: 500;
@@ -443,12 +447,6 @@
                         <img src="public/images/7.jpg">
                     </div>
                     <div class="swiper-slide">
-                        <img src="public/images/8.jpg">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="public/images/16.jpg">
-                    </div>
-                    <div class="swiper-slide">
                         <img src="public/images/20.jpg">
                     </div>
                     <div class="swiper-slide">
@@ -460,11 +458,11 @@
                     <div class="swiper-slide">
                         <img src="public/images/24.jpg">
                     </div>
-            </div>
+                </div>
         </header>
         <aside>
             <h6></h6>
-            <img id="img" class="trumpet" src="public/images/8.jpg" alt="">
+            <img id="img" class="trumpet" src="public/images/20.jpg" alt="">
             <div>
                 <div id="container_small_tip">
                     <div id="content_small_tip"></div>
@@ -582,6 +580,9 @@
             if (scale > 90) {
                 $('.progress p').css('width', width_parent)
                 $('.progress .progress-num').hide().text('100%')
+                if (scale >= 100) {
+                    layer.msg('爱你呦～')
+                }
             } else {
                 if (scale > 60) {
                     // $('header').show()
@@ -638,7 +639,7 @@
             let width = $('.progress p').width()
             let width_parent = $('.progress').width()
             let scale = (width / width_parent * 100) * 1
-            window.location.href='tel://18201492717'
+            window.location.href = 'tel://18201492717'
             if (scale <= 79) {
                 layer.msg('点点+吧～')
             }
@@ -648,13 +649,13 @@
             window.location.href = 'pages/video.html'
         })
         $('aside h6').click(function () {
-            if ($('.trumpet').attr('src') == 'public/images/8.jpg') {
+            if ($('.trumpet').attr('src') == 'public/images/20.jpg') {
                 layer.msg('暂停音乐')
                 $('.trumpet').attr('src', 'public/images/7.jpg')
                 document.getElementById("audio").pause()
             } else {
                 layer.msg('播放音乐')
-                $('.trumpet').attr('src', 'public/images/8.jpg')
+                $('.trumpet').attr('src', 'public/images/20.jpg')
                 document.getElementById("audio").play()
             }
         })
