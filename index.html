@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>张 薛 薇</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="keywords" content="张薛薇" />
+    <meta name="description" content="张薛薇" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <script type="text/javascript">
+        ! function (N, M) {
+            function L() {
+                var a = I.getBoundingClientRect().width;
+                a / F > 540 && (a = 540 * F);
+                var d = a / 10;
+                I.style.fontSize = d + "px", D.rem = N.rem = d
+            }
+            var K, J = N.document,
+                I = J.documentElement,
+                H = J.querySelector('meta[name="viewport"]'),
+                G = J.querySelector('meta[name="flexible"]'),
+                F = 0,
+                E = 0,
+                D = M.flexible || (M.flexible = {});
+            if (H) {
+                console.warn("将根据已有的meta标签来设置缩放比例");
+                var C = H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+                C && (E = parseFloat(C[1]), F = parseInt(1 / E))
+            } else {
+                if (G) {
+                    var B = G.getAttribute("content");
+                    if (B) {
+                        var A = B.match(/initial\-dpr=([\d\.]+)/),
+                            z = B.match(/maximum\-dpr=([\d\.]+)/);
+                        A && (F = parseFloat(A[1]), E = parseFloat((1 / F).toFixed(2))), z && (F = parseFloat(z[1]), E =
+                            parseFloat((1 / F).toFixed(2)))
+                    }
+                }
+            }
+            if (!F && !E) {
+                var y = N.navigator.userAgent,
+                    x = (!!y.match(/android/gi), !!y.match(/iphone/gi)),
+                    w = x && !!y.match(/OS 9_3/),
+                    v = N.devicePixelRatio;
+                F = x && !w ? v >= 3 && (!F || F >= 3) ? 3 : v >= 2 && (!F || F >= 2) ? 2 : 1 : 1, E = 1 / F
+            }
+            if (I.setAttribute("data-dpr", F), !H) {
+                if (H = J.createElement("meta"), H.setAttribute("name", "viewport"), H.setAttribute("content",
+                        "initial-scale=" + E + ", maximum-scale=" + E + ", minimum-scale=" + E + ", user-scalable=no"),
+                    I.firstElementChild) {
+                    I.firstElementChild.appendChild(H)
+                } else {
+                    var u = J.createElement("div");
+                    u.appendChild(H), J.write(u.innerHTML)
+                }
+            }
+            N.addEventListener("resize", function () {
+                clearTimeout(K), K = setTimeout(L, 300)
+            }, !1), N.addEventListener("pageshow", function (b) {
+                b.persisted && (clearTimeout(K), K = setTimeout(L, 300))
+            }, !1), "complete" === J.readyState ? J.body.style.fontSize = 12 * F + "px" : J.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    J.body.style.fontSize = 12 * F + "px"
+                }, !1), L(), D.dpr = N.dpr = F, D.refreshRem = L, D.rem2px = function (d) {
+                var c = parseFloat(d) * this.rem;
+                return "string" == typeof d && d.match(/rem$/) && (c += "px"), c
+            }, D.px2rem = function (d) {
+                var c = parseFloat(d) / this.rem;
+                return "string" == typeof d && d.match(/px$/) && (c += "rem"), c
+            }
+        }(window, window.lib || (window.lib = {}));
+    </script>
+    <!-- css -->
+    <link href="public/images/arr.png" rel="icon" />
+    <link rel="stylesheet" href="public/css/reset.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.4.4/weui.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/layer/3.3.0/layer.js"></script>
+    <script src="public/js/love.js"></script>
+    <style>
+        body {
+            min-height: 100vh;
+            box-sizing: border-box;
+            margin: 0;
+            padding-top: calc(50vh - 6em);
+            font: 150%/1.6 Baskerville, Palatino, serif;
+            background: url('public/images/bg2.jpeg') no-repeat top center;
+            background-size: cover;
+        }
+
+        body {
+            padding: .32rem .27rem;
+            box-sizing: border-box;
+        }
+
+        .body {
+            position: relative;
+            margin: 0 auto;
+            background: hsla(0, 0%, 100%, .25) border-box;
+            overflow: hidden;
+            border-radius: .3em;
+            box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset,
+                0 .5em 1em rgba(0, 0, 0, 0.6);
+            text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+        }
+
+        /*使用滤镜模糊边缘*/
+        .body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: -30px;
+            z-index: -1;
+            -webkit-filter: blur(20px);
+            filter: blur(20px);
+        }
+
+        header {
+            /* display: none; */
+            width: 100%;
+            margin-bottom: .32rem;
+        }
+
+        .swiper-pagination {
+            width: 1.1467rem;
+            height: 0.56rem;
+            background: #333333;
+            border-radius: 0.28rem;
+            position: absolute;
+            left: 85%;
+            bottom: 0.3733rem;
+            font-size: 0.24rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #EBD6AA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-container,
+        .swiper-wrapper,
+        .swiper-slide {
+            position: relative;
+            width: 100%;
+            height: 100% !important;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            width: 100%;
+            display: block;
+        }
+
+        aside {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: .27rem;
+            width: 100%;
+            height: .85rem;
+            background: #FFFFFF;
+            border-radius: .43rem;
+            padding: 0 .32rem;
+            box-sizing: border-box;
+        }
+
+        aside h6 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0);
+            z-index: 999;
+        }
+
+        aside .trumpet {
+            width: .53rem;
+            height: .53rem;
+            border-radius: 50%;
+        }
+
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        aside .trumpet {
+            -webkit-transform: rotate (360deg);
+            animation: rotation 10s linear infinite;
+            -moz-animation: rotation 10s linear infinite;
+            -webkit-animation: rotation 10s linear infinite;
+            -o-animation: rotation 10s linear infinite;
+        }
+
+        aside .arr {
+            width: .35rem;
+            height: .53rem;
+        }
+
+        aside div {
+            width: 7.63rem;
+            height: .43rem;
+            font-size: .29rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #666666;
+        }
+
+        #container_small_tip {
+            background: #ffffff;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        #content_small_tip {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            white-space: nowrap;
+            font-size: .29rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #666666;
+        }
+
+        article {
+            margin-bottom: .27rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 1.36rem;
+            background: #FFFFFF;
+            border-radius: .16rem;
+        }
+
+        article>div,article>a {
+            position: relative;
+            width: 33.3333%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        article>div::after,article>a::after {
+            content: ' ';
+            width: .03rem;
+            height: .61rem;
+            position: absolute;
+            top: .37rem;
+            background: #e6e6e6;
+            right: 0;
+        }
+
+        article>div:last-of-type::after {
+            display: none;
+        }
+
+        article div p,article a p {
+            margin-bottom: .03rem;
+            font-size: .32rem;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 500;
+            color: #333333;
+            line-height: .45rem;
+        }
+
+        article div span,article a span {
+            font-size: .32rem;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 500;
+            color: #ED4533;
+            line-height: .45rem;
+        }
+
+        footer {
+            width: 100%;
+            /* background: #FFFFFF; */
+            border-radius: .16rem;
+            padding: .37rem;
+            padding-top: .53rem;
+            box-sizing: border-box;
+        }
+
+        footer h3 {
+            margin: 0 auto;
+            margin-bottom: .67rem;
+            width: 6.64rem;
+            height: 1.31rem;
+            background: url(public/images/time.png) no-repeat center center;
+            background-size: 100%;
+            padding-top: .16rem;
+            box-sizing: border-box;
+            font-size: .51rem;
+            font-family: PingFangSC-Semibold, PingFang SC;
+            font-weight: 600;
+            color: #7E1414;
+            line-height: .69rem;
+            text-align: center;
+        }
+
+        footer>p {
+            width: 100%;
+            font-size: .43rem;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 500;
+            color: #000000;
+            line-height: .59rem;
+            text-align: center;
+            margin-bottom: .24rem;
+        }
+
+        footer h4 {
+            margin-bottom: .67rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        footer h4 span {
+            font-size: .32rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #000000;
+            line-height: .45rem;
+        }
+
+        footer h4 .progress {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 7.39rem;
+            height: 0.5rem;
+            background: #F5F5F5;
+            border-radius: .32rem;
+        }
+
+        .progress p {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #ED4533;
+            border-radius: .32rem;
+        }
+
+        .progress i {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            font-size: .32rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .classfy {
+            margin-bottom: .51rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .classfy div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 1.33rem;
+            height: 1.33rem;
+            border-radius: 50%;
+            font-size: .67rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .classfy .reduce {
+            background: #999;
+        }
+
+        .classfy .add {
+            background: pink;
+        }
+
+        footer h5 {
+            width: 100%;
+            text-align: center;
+            font-size: .29rem;
+            font-weight: normal;
+            color: rgba(168, 168, 168, 1);
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .audio-box {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <header class="">
+            <div class="swiper-container">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="public/images/7.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="public/images/8.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="public/images/16.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="public/images/20.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="public/images/22.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="public/images/23.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="public/images/24.jpg">
+                    </div>
+            </div>
+        </header>
+        <aside>
+            <h6></h6>
+            <img id="img" class="trumpet" src="public/images/8.jpg" alt="">
+            <div>
+                <div id="container_small_tip">
+                    <div id="content_small_tip"></div>
+                </div>
+            </div>
+        </aside>
+        <div class="audio-box">
+            <audio id="audio" autoplay="autoplay" loop="loop">
+                <source src="pages/audio/tracks/jq22com1.mp3" type="audio/ogg" />
+                <source src="pages/audio/tracks/jq22com1.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <article>
+            <div class="line">
+                <p class="toMusic">听音乐</p>
+                <span>5首</span>
+            </div>
+            <a href="javascript:void(0)" class="toStory line">
+                <p>听故事</p>
+                <span>--首</span>
+            </a>
+            <div class="toVideo line">
+                <p>看视频</p>
+                <span>1个</span>
+            </div>
+        </article>
+        <footer>
+            <h3>2021.09至forever</h3>
+            <p>Happy Valentine's Day Baby.</p>
+            <h4>
+                <span>0</span>
+                <div class="progress">
+                    <p><i class="progress-num"></i></p>
+
+                </div>
+                <span>100%</span>
+            </h4>
+            <div class="classfy">
+                <div class="reduce">
+                    -
+                </div>
+                <div class="add">
+                    +
+                </div>
+            </div>
+            <h5>
+                *Be grateful for everything, be brave to be yourself and time will tell you why.
+            </h5>
+        </footer>
+    </div>
+
+    <script>
+        // 轮播
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+        });
+        // 跑马灯插件start
+        var content = lover;
+        $("#content_small_tip").html(content);
+        roll(1, "#container_small_tip", "#content_small_tip");
+
+        function roll(speed = 1, fatherselect, select) {
+            if ($(fatherselect) == null) return;
+            var $container = $(fatherselect); //#container_small_tip
+            var $content = $(select); //#content_small_tip
+            var init_left = $container.width();
+            $content.css({
+                left: parseInt(init_left) + "px"
+            });
+            var This = this;
+            var time = setInterval(function () {
+                move($container, $content, speed);
+            }, 50); //setInterval会改变this指向，即使加了This=this，也要用匿名函数封装
+
+            $container.bind("mouseover", function () {
+                clearInterval(time);
+            });
+            $container.bind("mouseout", function () {
+                time = setInterval(function () {
+                    move($container, $content, speed);
+                }, 50);
+            });
+            // setTimeout(function () { $("#container").slideUp(); }, 30000);  //毫秒单位，显示30s后消失
+            return this;
+        };
+
+        function move($container, $content, speed) {
+            var container_width = $container.width();
+            var content_width = $content.width();
+            if (parseInt($content.css("left")) + content_width > 0) {
+                $content.css({
+                    left: parseInt($content.css("left")) - speed + "px"
+                });
+                // $content.css({ color: "#02A0E9" })//改变字体颜色
+            } else {
+                $content.css({
+                    left: parseInt(container_width) + "px"
+                });
+                // $content.css({ color: "#02A0E9" })//改变字体颜色
+            }
+        }
+        //跑马灯插件end
+
+        // 加号
+        $('.add').click(function () {
+            let width = $('.progress p').width()
+            let width_parent = $('.progress').width()
+            let scale = (width / width_parent * 100).toFixed(0) * 1
+            scale = scale + 10
+            if (scale > 90) {
+                $('.progress p').css('width', width_parent)
+                $('.progress .progress-num').hide().text('100%')
+            } else {
+                if (scale > 60) {
+                    // $('header').show()
+                    $('aside,article').css('display', 'flex')
+                    $('.progress p').css('width', scale + '%')
+                    $('.progress .progress-num').show().text(scale + '%')
+                    swiper = new Swiper('.swiper-container', {
+                        autoplay: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            type: 'fraction',
+                        },
+                    });
+                    if (scale >= 80) {
+                        $('.toStory').attr('href', 'tel:18201492717')
+                    }
+                } else {
+                    $('.progress p').css('width', scale + '%')
+                    $('.progress .progress-num').show().text(scale + '%')
+                }
+            }
+        })
+        //  减号
+        $('.reduce').click(function () {
+            let width = $('.progress p').width()
+            let width_parent = $('.progress').width()
+            let scale = (width / width_parent * 100) * 1
+            if (scale < 30) {
+                layer.msg('让我哄哄你吧')
+                $('header,aside,article').hide()
+            } else {
+                if (scale < 60) {
+                    layer.msg('真生气啦么')
+                    scale = (scale - 0.1).toFixed(1)
+                    $('.progress p').css('width', scale + '%')
+                    $('.progress .progress-num').show().text(scale + '%')
+                } else {
+                    layer.msg('我要往你头上盖一块抹布~')
+                    if (scale < 80) {
+                        $('.toStory').attr('href', 'javascript:void(0)')
+                    }
+                    scale = (scale - 1).toFixed(0)
+                    $('.progress p').css('width', scale + '%')
+                    $('.progress .progress-num').show().text(scale + '%')
+                }
+            }
+        })
+        // 听音乐
+        $('.toMusic').click(function () {
+            window.location.href = 'pages/audio/index.html'
+        })
+        // 听故事
+        $('.toStory').click(function () {
+            let width = $('.progress p').width()
+            let width_parent = $('.progress').width()
+            let scale = (width / width_parent * 100) * 1
+            window.location.href='tel://18201492717'
+            if (scale <= 79) {
+                layer.msg('点点+吧～')
+            }
+        })
+        // 看视频
+        $('.toVideo').click(function () {
+            window.location.href = 'pages/video.html'
+        })
+        $('aside h6').click(function () {
+            if ($('.trumpet').attr('src') == 'public/images/8.jpg') {
+                layer.msg('暂停音乐')
+                $('.trumpet').attr('src', 'public/images/7.jpg')
+                document.getElementById("audio").pause()
+            } else {
+                layer.msg('播放音乐')
+                $('.trumpet').attr('src', 'public/images/8.jpg')
+                document.getElementById("audio").play()
+            }
+        })
+    </script>
+</body>
+
+</html>
