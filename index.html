@@ -611,11 +611,14 @@
             let width_parent = $('.progress').width()
             let scale = (width / width_parent * 100) * 1
             if (scale < 30) {
-                layer.msg('让我哄哄你吧')
+                layer.msg('等一下，请等一下')
                 $('header,aside,article').hide()
+                scale = (scale - 0.01).toFixed(1)
+                $('.progress p').css('width', scale + '%')
+                $('.progress .progress-num').show().text(scale + '%')
             } else {
                 if (scale < 60) {
-                    layer.msg('真生气啦么')
+                    layer.msg('住手！大漂亮')
                     scale = (scale - 0.1).toFixed(1)
                     $('.progress p').css('width', scale + '%')
                     $('.progress .progress-num').show().text(scale + '%')
