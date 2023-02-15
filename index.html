@@ -585,7 +585,7 @@
                 }
             } else {
                 if (scale > 60) {
-                    // $('header').show()
+                    $('header').css('display', 'block')
                     $('aside,article').css('display', 'flex')
                     $('.progress p').css('width', scale + '%')
                     $('.progress .progress-num').show().text(scale + '%')
